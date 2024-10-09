@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <div>
+      <ion-icon name="exit-outline" (click)="regresar()"></ion-icon>
+    </div>
+    <ion-title>No registrado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="subTitulo">
+    <ion-card-header>
+      <ion-card-title id="titulo">Calculadora de Huella de Carbono</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p id="titulo">Navega y descubre la información nutricional y la huella de carbono de los alimentos.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <form (submit)="calcularAlimentos()" class="buscadorAlimento">
+    <div>
+      <ion-label>Alimento</ion-label>
+      <ion-input [(ngModel)]="foodItem" class="buscador" name="foodItem" required></ion-input>
+    </div>
+    <div>
+      <ion-label>Cantidad (g)</ion-label>
+      <ion-input type="number" [(ngModel)]="quantity" class="buscador" name="quantity" required></ion-input>
+    </div>
+    <ion-button class="boton" type="submit" expand="full">Calcular</ion-button>
+  </form>
+  
+  <div *ngIf="mostrarAlimentos !== null">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Huella de Carbono</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ mostrarAlimentos }} kg CO2e
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
