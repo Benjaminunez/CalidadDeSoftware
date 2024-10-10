@@ -3,17 +3,20 @@
     <img src="https://th.bing.com/th/id/R.7afe66d7e7b29f377b2b94560f212882?rik=DYBCmNkRzAyt0w&pid=ImgRaw&r=0" alt="">
     <h1 id="tituloSuperior">Calculadora Huella de Carbono "ONG life and sustentability"</h1>
     <div id="botonos">
-      <ion-button (click)="irNoRegistrado()" class="botonLinkeador">
+      <ion-button title="registrar usuario" (click)="irNoRegistrado()" class="botonLinkeador">
         <ion-icon name="person-add"></ion-icon>
       </ion-button>
-      <ion-button (click)="irRegistrado()" class="botonLinkeador">
+      <ion-button title="usuario premium" (click)="irRegistrado()" class="botonLinkeador">
         <ion-icon name="add-circle"></ion-icon>
       </ion-button>
-      <ion-button (click)="irAdmin()" class="botonLinkeador">
-        <ion-icon name="albums"></ion-icon>
+      <ion-button title="administracion" (click)="irAdmin()" class="botonLinkeador">
+        <ion-icon name="server"></ion-icon>
       </ion-button>      
     </div>
   </header>
+  <div class="sub-titulos">
+    <h1>Info Nutricional Platos Chilenos</h1>  
+  </div>
   <div id="productos"> 
     <ion-card>
       <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
@@ -49,6 +52,9 @@
       </ion-card-content>
     </ion-card>
   </div> 
+  <div class="sub-titulos">
+    <h1>Nuestro proposito</h1>  
+  </div>
   <div class="texto">
     <h3>Para asegurar que el nuevo sitio web y el desarrollo del módulo para cálculo de información
       nutricional y huella de carbono cumplan con los altos estándares de calidad y funcionalidad,

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 *{
     font-family: "Roboto", sans-serif;
@@ -8,7 +9,7 @@
 
 header{
     background-color: var(--fondoHeader);
-    height: 15vh;
+    height: auto;
     width: auto;
     color: white;
     display: flex;
@@ -42,6 +43,16 @@ header{
 }
 // parte central de pagina cartas--------------------------------//
 
+.sub-titulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: var(--fondoHeader);
+        font-size: 10vh;
+    }
+}
+
 #productos {
     display: flex;
     justify-content: center;
@@ -50,7 +61,7 @@ header{
     padding: 5%;
     overflow: auto;
     width: 100%;
-    margin: 10px 0px;
+    margin: 5px 0px;
     ion-card{
         max-width: 50vh;
     }
@@ -61,8 +72,7 @@ header{
     justify-content: center;
     align-items: center;
     justify-content: center;
-    margin: 10px 10px;
-    background-color: var(--fondoTextExpli);
+    margin: 80px 30px;
     width: auto;
     height: auto;
     border-radius: 23px;
@@ -71,6 +81,8 @@ header{
         margin: 3px 4px;
         font-size: 19px;
         color: var(--colorh3Expli);
+        font-family: "Courgette", cursive;
+        font-weight: 400;
     }
 
 }
