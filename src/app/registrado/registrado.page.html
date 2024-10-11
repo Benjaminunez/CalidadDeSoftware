@@ -1,6 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Premium User</ion-title>
+  <ion-toolbar class="cabeza">
+    <div id="icono">
+      <ion-icon id="salir" name="exit-outline" (click)="regresar()"></ion-icon>
+      <ion-title id="header">Usuario Premium</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -15,9 +18,11 @@
   </ion-card>
   
   <form (submit)="calcularAlimentos()" class="buscadorAlimento">
-    <div>
-      <ion-label>Alimento</ion-label>
-      <ion-input [(ngModel)]="foodItem" class="buscador" name="foodItem" required></ion-input>
+    <div class="centro">
+      <ion-label id="titulo">Alimento</ion-label>
+      <ion-select [(ngModel)]="foodItem" name="foodItem" class="no" required>
+        <ion-select-option *ngFor="let alimento of alimentosList" [value]="alimento">{{ alimento }}</ion-select-option>
+      </ion-select>
     </div>
     <div>
       <ion-label>Cantidad (g)</ion-label>

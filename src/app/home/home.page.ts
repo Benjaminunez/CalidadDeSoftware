@@ -22,6 +22,10 @@ export class HomePage implements OnInit {
     this.router.navigate(['/admin'])
   }
 
+  irRegistro(){
+    this.router.navigate(['/registro'])
+  }
+
   ngOnInit() {
   }
 

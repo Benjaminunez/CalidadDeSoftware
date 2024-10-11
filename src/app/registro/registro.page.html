@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar class="cabeza">
+    <div id="icono">
+      <ion-icon id="salir" name="exit-outline" (click)="regresar()"></ion-icon>
+      <ion-title id="header">Registro de Usuario</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.primerNombre" name="primerNombre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.apellido" name="apellido" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="usuario.email" name="email" required email></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número Telefónico</ion-label>
+      <ion-input type="tel" [(ngModel)]="usuario.numeroTelefonico" name="numeroTelefonico" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Forma de Pago</ion-label>
+      <ion-select [(ngModel)]="usuario.metodoPago" name="metodoPago" required>
+        <ion-select-option value="tarjetaCredito">Tarjeta de Crédito</ion-select-option>
+        <ion-select-option value="tarjetaDebito">Tarjeta de Débito</ion-select-option>
+        <ion-select-option value="paypal">PayPal</ion-select-option>
+        <ion-select-option value="mercadoPago">Mercado Pago</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="usuario.aceptarTerminos" name="aceptarTerminos" required></ion-checkbox>
+      <ion-label (click)="terminosCondiciones()">Acepto los términos y condiciones</ion-label>
+    </ion-item>
+
+    <ion-button type="submit" [disabled]="!registerForm.form.valid" expand="full">Registrar</ion-button>
+  </form>
+</ion-content>

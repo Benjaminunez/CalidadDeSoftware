@@ -1,3 +1,14 @@
 .boton {
-    margin-top: 20px;
+  margin-top: 20px;
+}
+
+#icono {
+  display: flex;
+  flex-direction: row;
+  #salir {
+      font-size: 2rem;
   }
+  #header {
+    text-align-last: center;
+  }
+}

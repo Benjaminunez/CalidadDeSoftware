@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrado',
@@ -11,11 +12,18 @@ export class RegistradoPage implements OnInit {
   mostrarAlimentos: number | null = null;
 
   alimentosData: { [key: string]: number } = {
-    'carne': 0.027,
     'pollo': 0.0069,
     'arroz': 0.0045,
     'manzana': 0.0003,
+    'carne de res': 0.027,
+    'cerdo': 0.0079,
+    'cordero': 0.024,
+    'pescado': 0.006,
+    'queso': 0.0135,
+    'leche': 0.0014,
   };
+
+  alimentosList: string[] = Object.keys(this.alimentosData);
 
   calcularAlimentos() {
     if (this.alimentosData[this.foodItem.toLowerCase()]) {
@@ -25,9 +33,14 @@ export class RegistradoPage implements OnInit {
       alert('Alimento no encontrado en la base de datos');
     }
   }
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  regresar(){
+    this.router.navigate(['/home'])
   }
 
 }

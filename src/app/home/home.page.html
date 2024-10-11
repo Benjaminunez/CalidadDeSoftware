@@ -3,13 +3,16 @@
     <img src="https://th.bing.com/th/id/R.7afe66d7e7b29f377b2b94560f212882?rik=DYBCmNkRzAyt0w&pid=ImgRaw&r=0" alt="">
     <h1 id="tituloSuperior">Calculadora Huella de Carbono "ONG life and sustentability"</h1>
     <div id="botonos">
-      <ion-button title="registrar usuario" (click)="irNoRegistrado()" class="botonLinkeador">
+      <ion-button title="Registrar Usuario" (click)="irRegistro()" class="botonLinkeador">
         <ion-icon name="person-add"></ion-icon>
       </ion-button>
-      <ion-button title="usuario premium" (click)="irRegistrado()" class="botonLinkeador">
-        <ion-icon name="add-circle"></ion-icon>
+      <ion-button title="Usuario No Registrado" (click)="irNoRegistrado()" class="botonLinkeador">
+        <ion-icon name="person"></ion-icon>
       </ion-button>
-      <ion-button title="administracion" (click)="irAdmin()" class="botonLinkeador">
+      <ion-button title="Usuario Premium" (click)="irRegistrado()" class="botonLinkeador">
+        <ion-icon name="diamond"></ion-icon>
+      </ion-button>
+      <ion-button title="Administrador" (click)="irAdmin()" class="botonLinkeador">
         <ion-icon name="server"></ion-icon>
       </ion-button>      
     </div>
