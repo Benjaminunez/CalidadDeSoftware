@@ -11,7 +11,7 @@ header{
     background-color: var(--fondoHeader);
     height: auto;
     width: auto;
-    color: white;
+    color: var(--fondoBoton);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,6 +19,8 @@ header{
     column-gap: 8.5rem;
     overflow: auto;   
     margin: 8px 0px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     img{
         max-width: 5rem;
         }
@@ -89,20 +91,37 @@ header{
 
 // parte final de pagina homepage --------------------------------//
 footer {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #4b4b4b;
+    background-color: var(--fondoFotter);
     width: auto;
-    height: 16.5%;
-    #botonFooter {
-        font-size: 15px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        background: var(--fondoBoton);
+    height: auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    .titulos-fotter{
         display: flex;
-        justify-content: center;
-        align-self: center;
         align-items: center;
-        height: 30px;
-        width: 12rem;
+        justify-content: center;
+        column-gap: 10rem;
+        img{
+            max-width: 10rem;
+            max-height: 10rem;
+        }
     }
+    .info-fotter{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 10px;
+        max-width: 10rem;
+        h1{
+            font-size: 25px;
+        }
+        a{
+            text-decoration: none;
+            .iconos-redes{
+                height: 20px;
+            }
+
+        }
+    }
+
 }
