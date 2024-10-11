@@ -7,9 +7,33 @@
     font-style: normal;
 }
 
-#barrasuperior{
-    background-color: Var(--fondoTextExpli);
-    width: auto;
+#cabezera{
+    background-color: var(--fondoCabezera);
+    display: flex;
+    justify-content: center;
+    max-height: 2rem;
+    align-items: center;
+    column-gap: 30rem;
+     #part1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+        #part2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 30px;
+            ion-button{
+                background-color:var(--fondoCabezera)
+            }
+                p{
+                    padding: 0px;
+                    margin: 0px 0px;
+                }     
+        }      
+    }       
+
 }
 
 header{
@@ -67,6 +91,7 @@ header{
     }
 
 }
+
 // parte central de pagina cartas--------------------------------//
 
 .sub-titulos{
