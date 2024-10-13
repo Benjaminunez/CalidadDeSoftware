@@ -11,34 +11,53 @@
     background-color: var(--fondoCabezera);
     display: flex;
     justify-content: center;
-    max-height: 2rem;
+    max-height: 2.5rem;
     align-items: center;
-    column-gap: 30rem;
-     #part1{
+    column-gap: 35rem;
+    border-bottom: var(--fondoHeader) solid 5px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    #part1{
         display: flex;
         justify-content: center;
         align-items: center;
-        column-gap: 10px;
-        #part2{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            column-gap: 30px;
-            ion-button{
-                background-color:var(--fondoCabezera)
-            }
-                p{
-                    padding: 0px;
-                    margin: 0px 0px;
-                }     
-        }      
+        column-gap: 10px; 
+        max-width: 20rem;
+        cursor: pointer;
+        p{
+            margin: 4px 0px;
+            width: 14rem;
+            font-weight: 200;
+        }
     }       
+    //........//
+    #part2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 20px;
+        p{
+            cursor: pointer;
+        }
+
+    }
+}
+
+
+//----------------------------- espacio media queries cabezera//
+@media (max-width: 1115px){   
+    #part2 > p {
+        display: none;
+    }
 
 }
 
+//----------------------------- //
+
+
 header{
     height: auto;
-    width: auto;
+    width: 100%;
     color: var(--fondoBoton);
     display: flex;
     flex-direction: row;
