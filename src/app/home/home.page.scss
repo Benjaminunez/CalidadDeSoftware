@@ -7,13 +7,18 @@
     font-style: normal;
 }
 
-#cabezera{
+
+#cabezera-chico{
+    display: none;
+}
+
+#cabezera-grande{
     background-color: var(--fondoCabezera);
     display: flex;
     justify-content: center;
     max-height: 2.5rem;
     align-items: center;
-    column-gap: 35rem;
+    column-gap: 38rem;
     border-bottom: var(--fondoHeader) solid 5px;
     padding-left: 6rem;
     padding-right: 6rem;
@@ -46,10 +51,29 @@
 
 //----------------------------- espacio media queries cabezera//
 @media (max-width: 1115px){   
-    #part2 > p {
+    
+    #cabezera-grande{
         display: none;
     }
 
+    #cabezera-chico{
+        background-color: var(--fondoCabezera);
+        display: flex;
+        justify-content: center;
+        max-height: 2.5rem;
+        align-items: center;
+        border-bottom: var(--fondoHeader) solid 5px;
+        padding-left: 6rem;
+        padding-right: 6rem;
+        #part1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 10px; 
+            max-width: 20rem;
+            cursor: pointer;
+        }
+    }
 }
 
 //----------------------------- //
