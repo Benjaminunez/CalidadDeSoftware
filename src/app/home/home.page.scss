@@ -51,11 +51,9 @@
 
 //----------------------------- espacio media queries cabezera//
 @media (max-width: 1115px){   
-    
     #cabezera-grande{
         display: none;
     }
-
     #cabezera-chico{
         background-color: var(--fondoCabezera);
         display: flex;
@@ -69,15 +67,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            column-gap: 10px; 
+            column-gap: 16px; 
             max-width: 20rem;
             cursor: pointer;
+            p{
+                margin: 4px 0px;
+                width: 16rem;
+                font-weight: 300;
+            }
         }
     }
 }
-
 //----------------------------- //
 
+#img-titulo-p{
+    display: none;
+}
 
 header{
     height: auto;
@@ -88,7 +93,7 @@ header{
     justify-content: center;
     align-items: center;
     overflow: auto;  
-    column-gap: 20rem; 
+    column-gap: 8rem; 
     margin: 8px 0px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -127,14 +132,63 @@ header{
                 }
             }
 
-    #img-titulo{
+    #img-titulo-g{
         display: flex;
         align-items: center;
         column-gap: 8px;
     }
 
+    #boton-buscador{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px;
+        align-items: center;
+        #TV{
+            background-color: transparent;
+            border: 1px solid red;
+            width: 15vh;
+            height: 5vh;
+            border-radius: 6px;
+        }
+        input{
+            width: 90%;
+            height: 5vh;
+            color: black;
+        }
+        #search{
+            width: 13vh;
+            height: 5vh;
+            border-color: var(--fondoHeader);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+    }
+
 }
 
+//----------------------------- espacio media queries cabezera//
+@media(max-width: 1000px){ 
+    header {
+        display: none;
+    }
+
+    #img-titulo-p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        img{
+            max-width: 10rem;
+            margin: 10px 0px;
+        }
+        h1{
+            font-size: 20px;
+        }
+    }
+
+}
 // parte central de pagina cartas--------------------------------//
 
 .sub-titulos{
