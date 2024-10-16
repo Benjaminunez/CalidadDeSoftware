@@ -154,6 +154,7 @@ header{
             width: 90%;
             height: 5vh;
             color: black;
+            border-radius: 6px;
         }
         #search{
             width: 13vh;
@@ -190,6 +191,37 @@ header{
 
 }
 // parte central de pagina cartas--------------------------------//
+
+
+#baseMenu{
+    display: flex;
+    justify-content: center;
+    #menuOption{
+        display: flex;
+        background-color: var(--fonfoBarraTareas);
+        width: 90%;
+        column-gap: 10px;
+        border-radius: 10px;
+    }
+    .botonLinkeador{
+        --background: var(--fonfoBarraTareas);
+        --border-color:var(--fondoBoton);
+    }
+}
+//----------------------------- espacio media queries muno opciones//
+@media(max-width: 504px){
+    #menuOption{
+        flex-direction: column;
+        width: 80%;
+        margin: 15px 0px;
+    }
+}
+
+
+
+
+
+
 
 .sub-titulos{
     display: flex;
