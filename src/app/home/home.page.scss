@@ -169,6 +169,7 @@ header{
 }
 
 //----------------------------- espacio media queries cabezera//
+
 @media(max-width: 1000px){ 
     header {
         display: none;
@@ -190,7 +191,8 @@ header{
     }
 
 }
-// parte central de pagina cartas--------------------------------//
+
+// menu de opciones --------------------------------//
 
 
 #baseMenu{
@@ -209,6 +211,7 @@ header{
     }
 }
 //----------------------------- espacio media queries muno opciones//
+
 @media(max-width: 504px){
     #menuOption{
         flex-direction: column;
@@ -217,9 +220,75 @@ header{
     }
 }
 
+//espacio base infografia ----------------------------- //
+#baseinfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    #info-imagen{
+        display: flex;
+        max-width: auto;
+        justify-content: space-between;
+        column-gap: 2%;
+        img{
+            max-width: 45rem;
+            max-height: 60rem;
+            margin: 10px 0px;
+            border-radius: 6px;
+            margin-left: 6rem;
+        }
+    }
+
+    #informacion{
+        padding-right: 6rem;
+        max-width: 50%;
+        .titulo-topicos{
+            font-weight: 1000;
+            p{
+                font-size: 3px;
+            }
+        }
+
+    }
+
+    #lineazul{
+        background-color: var(--fondoHeader);
+        height: 3px;
+        width: 8rem;
+    }
 
 
+}
 
+//----------------------------- espacio media queries muno opciones//
+
+@media(max-width:1115px){
+    #info-imagen{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            max-width: 5rem;
+            max-height: 5rem;
+        }
+
+        #informacion{
+            padding-right: 0rem;
+            h6{
+                text-align: center;
+            #titulo-topicos{
+                text-align: center;
+                p{
+                    text-align: center;
+                }
+                }
+            }
+        }
+    
+    }
+    
+}
 
 
 
