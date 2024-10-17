@@ -38,7 +38,7 @@ export class AdminPage implements OnInit {
     this.router.navigate(['/registro']);
   }
 
-  downloadTxtFile() {
+  descargarArchivo() {
     const message = `# Reporte de Impacto Ambiental de Alimentos
 
 ## Introducción
