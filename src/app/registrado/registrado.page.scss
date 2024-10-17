@@ -303,3 +303,57 @@ header {
     justify-content: center;
     width: 50%;
 }
+
+.calculadora {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.divResultado {
+    background: #222;
+    color: #fff;
+    text-align: right;
+    padding: 20px;
+    font-size: 2em;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5em;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.btn:active {
+    background: #ddd;
+}
+
+.operator {
+    background: #ff9500;
+    color: #fff;
+}
+
+.operator:active {
+    background: #e08900;
+}
+
+.equals {
+    grid-column: span 4;
+    background: #007aff;
+    color: #fff;
+}
+
+.equals:active {
+    background: #005fcb;
+}

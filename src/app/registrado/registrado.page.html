@@ -80,15 +80,35 @@
     </div>
     <ion-button class="boton" type="submit" expand="full">Calcular</ion-button>
   </form>
-  
-  <div *ngIf="mostrarAlimentos !== null">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Huella de Carbono</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        {{ mostrarAlimentos }} kg CO2e
-      </ion-card-content>
-    </ion-card>
+
+  <div class="calculadora">
+    <div class="divResultado">
+      <div class="resultado">{{ mostrarAlimentos !== null ? mostrarAlimentos + ' kg CO2e' : '0' }}</div>
+    </div>
+    <div class="buttons">
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn operator">/</button>
+      
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn operator">*</button>
+      
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn operator">-</button>
+      
+      <button class="btn">0</button>
+      <button class="btn">.</button>
+      <button class="btn">C</button>
+      <button class="btn operator">+</button>
+      
+      <button class="btn equals" colspan="4">=</button>
+    </div>
   </div>
+  <br>
+  <br>
 </ion-content>

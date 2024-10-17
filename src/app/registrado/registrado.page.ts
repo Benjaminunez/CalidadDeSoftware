@@ -30,7 +30,7 @@ export class RegistradoPage implements OnInit {
       this.mostrarAlimentos = this.alimentosData[this.foodItem.toLowerCase()] * this.quantity;
     } else {
       this.mostrarAlimentos = null;
-      alert('Alimento no encontrado en la base de datos');
+      alert('Por favor escoga un alimento dentro de nuestra base de datos!.');
     }
   }
 
