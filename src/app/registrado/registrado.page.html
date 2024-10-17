@@ -1,31 +1,81 @@
-<ion-header>
-  <ion-toolbar class="cabeza">
-    <div id="icono">
-      <ion-icon id="salir" name="exit-outline" (click)="regresar()"></ion-icon>
-      <ion-title id="header">Usuario Premium</ion-title>
-    </div>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Calculadora de Huella de Carbono</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>Accede a información detallada de ingredientes y platos preparados.</p>
-    </ion-card-content>
-  </ion-card>
+  <div id="cabezera-grande">
+    <div id="part1">
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
+      <p>Bienvenidos a naciones unidas</p>
+    </div>
+    <div id="part2">
+        <p>Español</p>
+        <p>English</p>
+        <p>日本語</p>
+        <p>Deutsch</p>
+    </div>
+  </div>
+  
+  <div id="cabezera-chico">
+    <div id="part1">
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
+      <p>Bienvenidos a naciones unidas</p>
+    </div>
+  </div>
+  
+  <header>
+    <div id="img-titulo-g">
+      <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
+      <div class="linea-horizontal"></div>
+      <div id="titulo-pagina">
+        <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
+      </div>
+    </div>
+    <div id="boton-buscador">
+      <a href="https://webtv.un.org/es?_gl=1*113aiqa*_ga*MTY2MzQ4NzgxMS4xNzI4NjYzMjAy*_ga_TK9BQL5X7Z*MTcyOTAzNjkxNi41LjEuMTcyOTAzNzQzOS4wLjAuMA..">
+        <button id="TV">
+          UN Web TV
+        </button>
+      </a>
+      <input type="text" placeholder="Búsqueda">
+      <button id="search">
+        <ion-icon name="search"></ion-icon>
+      </button> 
+    </div>
+  </header>
+  
+  <div id="img-titulo-p">
+    <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
+    <div class="linea-horizontal"></div>
+    <div id="titulo-pagina">
+      <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
+    </div>
+  </div>  
+  
+  <div id="baseMenu">    
+    <div id="menuOption">
+      <ion-button title="Registrar Usuario" (click)="irRegistro()" class="botonLinkeador">
+        <ion-icon name="person-add"> </ion-icon>
+         Registro Usuario
+      </ion-button>
+      <ion-button title="Usuario Premium" (click)="irRegistrado()" class="botonLinkeador">
+        <ion-icon name="diamond"></ion-icon>
+        Calculadora
+      </ion-button>
+      <ion-button title="Administrador" (click)="irAdmin()" class="botonLinkeador">
+        <ion-icon name="server"></ion-icon>
+        Manejo DB
+      </ion-button>
+    </div>
+  </div>
   
   <form (submit)="calcularAlimentos()" class="buscadorAlimento">
+    <h1 class="nose">Calculadora de Huella de Carbono</h1>
+    <h3 class="nose">Accede a información detallada de ingredientes y platos preparados.</h3>
     <div class="centro">
-      <ion-label id="titulo">Alimento</ion-label>
+      <ion-label id="titulo">Escoja un alimento dentro de nuestra base de datos</ion-label>
       <ion-select [(ngModel)]="foodItem" name="foodItem" class="no" required>
         <ion-select-option *ngFor="let alimento of alimentosList" [value]="alimento">{{ alimento }}</ion-select-option>
       </ion-select>
     </div>
-    <div>
-      <ion-label>Cantidad (g)</ion-label>
+    <div class="cantidades">
+      <ion-label id="tituloCan">Cantidad (g)</ion-label>
       <ion-input type="number" [(ngModel)]="quantity" class="buscador" name="quantity" required></ion-input>
     </div>
     <ion-button class="boton" type="submit" expand="full">Calcular</ion-button>

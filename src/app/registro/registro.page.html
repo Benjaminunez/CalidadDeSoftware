@@ -1,14 +1,72 @@
-<ion-header>
-  <ion-toolbar class="cabeza">
-    <div id="icono">
-      <ion-icon id="salir" name="exit-outline" (click)="regresar()"></ion-icon>
-      <ion-title id="header">Registro de Usuario</ion-title>
-    </div>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div id="cabezera-grande">
+    <div id="part1">
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
+      <p>Bienvenidos a naciones unidas</p>
+    </div>
+    <div id="part2">
+        <p>Español</p>
+        <p>English</p>
+        <p>日本語</p>
+        <p>Deutsch</p>
+    </div>
+  </div>
+  
+  <div id="cabezera-chico">
+    <div id="part1">
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
+      <p>Bienvenidos a naciones unidas</p>
+    </div>
+  </div>
+  
+  <header>
+    <div id="img-titulo-g">
+      <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
+      <div class="linea-horizontal"></div>
+      <div id="titulo-pagina">
+        <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
+      </div>
+    </div>
+    <div id="boton-buscador">
+      <a href="https://webtv.un.org/es?_gl=1*113aiqa*_ga*MTY2MzQ4NzgxMS4xNzI4NjYzMjAy*_ga_TK9BQL5X7Z*MTcyOTAzNjkxNi41LjEuMTcyOTAzNzQzOS4wLjAuMA..">
+        <button id="TV">
+          UN Web TV
+        </button>
+      </a>
+      <input type="text" placeholder="Búsqueda">
+      <button id="search">
+        <ion-icon name="search"></ion-icon>
+      </button> 
+    </div>
+  </header>
+  
+  <div id="img-titulo-p">
+    <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
+    <div class="linea-horizontal"></div>
+    <div id="titulo-pagina">
+      <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
+    </div>
+  </div>  
+  
+  <div id="baseMenu">    
+    <div id="menuOption">
+      <ion-button title="Registrar Usuario" (click)="irRegistro()" class="botonLinkeador">
+        <ion-icon name="person-add"> </ion-icon>
+         Registro Usuario
+      </ion-button>
+      <ion-button title="Usuario Premium" (click)="irRegistrado()" class="botonLinkeador">
+        <ion-icon name="diamond"></ion-icon>
+        Calculadora
+      </ion-button>
+      <ion-button title="Administrador" (click)="irAdmin()" class="botonLinkeador">
+        <ion-icon name="server"></ion-icon>
+        Manejo DB
+      </ion-button>
+    </div>
+  </div>
+
   <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+    <h1>Registro</h1>
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
       <ion-input type="text" [(ngModel)]="usuario.primerNombre" name="primerNombre" required></ion-input>
@@ -24,9 +82,26 @@
       <ion-input type="email" [(ngModel)]="usuario.email" name="email" required email></ion-input>
     </ion-item>
 
+    <ion-item class="contrasena">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [type]="contrasenaTipo" [(ngModel)]="usuario.contrasena" name="contrasena" required></ion-input>
+      <ion-icon slot="end" [name]="iconoContrasena" (click)="verContrasena()"></ion-icon>
+    </ion-item>
+
+    <ion-item class="contrasena">
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input [type]="confirmadorContrasenaTipo" [(ngModel)]="usuario.confirmarContrasena" name="confirmarContrasena" required></ion-input>
+      <ion-icon slot="end" [name]="confirmadorIconoContrasena" (click)="verContrasenaConfirmada()"></ion-icon>
+    </ion-item>
+
+    <!-- Mensaje de error si las contraseñas no coinciden -->
+    <div *ngIf="mensajeError" class="error-message">
+      Las contraseñas no coinciden
+    </div>
+
     <ion-item>
       <ion-label position="floating">Número Telefónico</ion-label>
-      <ion-input type="tel" [(ngModel)]="usuario.numeroTelefonico" name="numeroTelefonico" required></ion-input>
+      <ion-input type="number" [(ngModel)]="usuario.numeroTelefonico" name="numeroTelefonico" required></ion-input>
     </ion-item>
 
     <ion-item>
@@ -46,4 +121,7 @@
 
     <ion-button type="submit" [disabled]="!registerForm.form.valid" expand="full">Registrar</ion-button>
   </form>
+  <br>
+  <br>
+  <br>
 </ion-content>

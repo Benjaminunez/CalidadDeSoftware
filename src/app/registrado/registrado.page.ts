@@ -43,4 +43,20 @@ export class RegistradoPage implements OnInit {
     this.router.navigate(['/home'])
   }
 
+  irNoRegistrado() {
+    this.router.navigate(['/no-registrado']);
+  }
+
+  irRegistrado(){
+    this.router.navigate(['/registrado'])
+  }
+
+  irAdmin(){
+    this.router.navigate(['/admin'])
+  }
+
+  irRegistro(){
+    this.router.navigate(['/registro'])
+  }
+
 }
