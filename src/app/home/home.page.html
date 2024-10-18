@@ -29,7 +29,7 @@
 <header>
   <!--menu de pantalla grande titulo-imagen--> 
   <div id="img-titulo-g">
-    <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
+    <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="" [routerLink]="['/home']">
     <div class="linea-horizontal"></div>
     <div id="titulo-pagina">
       <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
@@ -37,7 +37,7 @@
   </div>
   <div id="boton-buscador">
     <a href="https://webtv.un.org/es?_gl=1*113aiqa*_ga*MTY2MzQ4NzgxMS4xNzI4NjYzMjAy*_ga_TK9BQL5X7Z*MTcyOTAzNjkxNi41LjEuMTcyOTAzNzQzOS4wLjAuMA..">
-      <button id="TV">
+      <button class="button-all">
         UN Web TV
       </button>
     </a>
@@ -52,7 +52,7 @@
 <!--menu de pantalla pequeña titulo-imagen-->
 
 <div id="img-titulo-p">
-  <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
+  <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="" [routerLink]="['/home']">
   <div class="linea-horizontal"></div>
   <div id="titulo-pagina">
     <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
@@ -118,13 +118,13 @@
       <p>Programa "Elige Vivir Sano ONU"</p>  
     </div>
     <div class="lineazul"></div>
-    <div id="sub-info">
+    <div class="sub-info">
         <p>Con gran entusiasmo me dirijo a usted para expresar mi interés en formar parte del prestigioso programa de alimentación sana de 
           "Elige Vivir Sano ONU". La oportunidad de contribuir a la promoción de estilos de vida saludables y de aprender de un equipo tan 
           comprometido y talentoso me resulta extremadamente motivadora.</p>
     </div>
 </div>
-
+<!--............................................. platos a recomendar-->
 
   <div id="productos"> 
     <ion-card>
@@ -161,42 +161,35 @@
       </ion-card-content>
     </ion-card>
   </div> 
+  
+  <!--............................................. sobre organizacion-->
+    
+<div id="propocito-base">
   <div class="sub-titulos">
-    <h1>Nuestro proposito</h1>  
+    <p id="texto-nosotros">Nuestro proposito</p>  
   </div>
-  <div class="texto">
-    <h3>Para asegurar que el nuevo sitio web y el desarrollo del módulo para cálculo de información
+  <div class="sub-info">
+    <p id="info-nosotros">Para asegurar que el nuevo sitio web y el desarrollo del módulo para cálculo de información
       nutricional y huella de carbono cumplan con los altos estándares de calidad y funcionalidad,
       y por recomendación de los profesores de la Sede Melipilla de DUOC UC, la ONG ha decidido
       contratar a su equipo semestral de la asignatura Calidad de Software para asesorar a la
       organización en la creación y gestión de un proceso de pruebas completo, enfocado en
       garantizar la calidad del desarrollo y el cumplimiento de todos los requisitos establecidos
-      para el sistema.</h3>
+      para el sistema.</p>
   </div>
-  <footer>
-    <div class="titulos-fotter">
-      <div class="info-fotter">
-        <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
-        <P>organizacion de las naciones unidas</P>
-        <P>area de salud y bienestar</P>
-      </div>
-      <div class="info-fotter">
-        <h1>Sobre Nosotros</h1>
-        <a href="https://www.un.org/es/ga/">.. NUESTRA INSTITUCIÓN</a>
-        <a href="">.. NUESTRA MISION</a>
-        <a href="">hola amigos</a>
-        <a href="">hola amigos</a>
-      </div>
-      <div class="info-fotter">
-        <h1>hola amigos</h1>
-        <a href="">hola amigos</a>
-      </div>
-      <div class="info-fotter">
-        <h1>Redes Sociales</h1>
-        <a href="">
-          <ion-icon class="iconos-redes"  name="logo-instagram"></ion-icon>
-        </a>
-      </div>
-    </div>
-  </footer>
+  <div id="mas-info-pro">
+    <a href="https://www.un.org/es/about-us">
+      <button class="button-all">
+        Más Info
+      </button>         
+    </a> 
+  </div>  
+</div>  
+
+<!--............................................. fotter de pagina-->
+
+<footer>
+
+</footer>
+
 </ion-content>

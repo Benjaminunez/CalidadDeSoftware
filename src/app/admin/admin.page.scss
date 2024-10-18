@@ -58,6 +58,31 @@
 }
 
 
+#baseMenu{
+    display: flex;
+    justify-content: center;
+    #menuOption{
+        display: flex;
+        background-color: var(--fonfoBarraTareas);
+        width: 90%;
+        column-gap: 10px;
+        border-radius: 10px;
+    }
+    .botonLinkeador{
+        --background: var(--fonfoBarraTareas);
+        --border-color:var(--fondoBoton);
+    }
+}
+//----------------------------- espacio media queries muno opciones//
+
+@media(max-width: 504px){
+    #menuOption{
+        flex-direction: column;
+        width: 80%;
+        margin: 15px 0px;
+    }
+}
+
 //----------------------------- espacio media queries cabezera//
 @media (max-width: 1115px) {
     #cabezera-grande {
@@ -119,14 +144,14 @@ header {
         width: 2px;
     }
 
-    img {
+    img{
         max-width: 20rem;
         margin: 10px 0px;
-    }
-
-    #titulo-pagina {
-        max-width: 20rem;
-    }
+        cursor: pointer;
+        }
+        #titulo-pagina{
+            max-width: 20rem;
+        }
 
     h1 {
         color: #6388ab;
@@ -207,6 +232,7 @@ header {
         img {
             max-width: 10rem;
             margin: 10px 0px;
+            cursor: pointer;
         }
 
         h1 {
