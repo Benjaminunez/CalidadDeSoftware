@@ -448,4 +448,132 @@ header{
 
 // parte final de pagina homepage --------------------------------//
 
+ion-footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 40px 0;
 
+    .footer-contenidos {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .divisor {
+            border-top: #5b5b5b solid 1px;
+            margin: 1.6rem 0 1.9rem 0;
+            padding: 0 1rem;
+        }
+
+        #ul {
+            padding-left: 0;
+            list-style: none;
+            margin-left: -5px;
+            display: flex;
+            flex-wrap: wrap;
+
+            #ultimo {
+                padding-right: 0;
+                border-right: none;
+            }
+
+            li a {
+                text-decoration: none;
+            }
+
+            li a:hover {
+                text-decoration: none;
+              }
+
+            li {
+                padding: 0 1.3rem 0 1rem;
+                border-right: gray solid 0.3rem;
+
+                a {
+                    font-weight: 500;
+                    font-size: 0.7rem;
+                    color: white;
+                    letter-spacing: 0.77px;
+                    line-height: 1.1667;
+                    padding: 0;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .footer-secciones {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .footer-seccion {
+                flex: 1;
+                margin: 10px;
+
+                img {
+                    width: 13rem;
+                }
+
+                h5 {
+                    font-size: 1.2rem;
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+
+                    li {
+                        margin-bottom: 5px;
+
+                        a {
+                            color: #C4C4C4;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    &.iconos-sociales {
+                        display: flex;
+                        gap: 10px;
+                        justify-content: right;
+
+                        #otroDivisor {
+                            border-right: #ababab solid 0.1rem;
+                            margin-left: 3rem;
+                        }
+
+                        button {
+                            width: 7rem;
+                            height: 1.8rem;
+                            color: #000000;
+                            background-color: white;
+                            border-radius: 5px;
+                            font-family: monospace;
+                            margin-left: 1rem;
+                        }
+
+                        li {
+                            margin: 0;
+
+                            a {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
