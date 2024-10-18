@@ -29,7 +29,7 @@
 <header>
   <!--menu de pantalla grande titulo-imagen--> 
   <div id="img-titulo-g">
-    <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="" [routerLink]="['/home']">
+    <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
     <div class="linea-horizontal"></div>
     <div id="titulo-pagina">
       <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
@@ -37,7 +37,7 @@
   </div>
   <div id="boton-buscador">
     <a href="https://webtv.un.org/es?_gl=1*113aiqa*_ga*MTY2MzQ4NzgxMS4xNzI4NjYzMjAy*_ga_TK9BQL5X7Z*MTcyOTAzNjkxNi41LjEuMTcyOTAzNzQzOS4wLjAuMA..">
-      <button class="button-all">
+      <button id="TV">
         UN Web TV
       </button>
     </a>
@@ -52,7 +52,7 @@
 <!--menu de pantalla pequeña titulo-imagen-->
 
 <div id="img-titulo-p">
-  <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="" [routerLink]="['/home']">
+  <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
   <div class="linea-horizontal"></div>
   <div id="titulo-pagina">
     <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
@@ -118,13 +118,13 @@
       <p>Programa "Elige Vivir Sano ONU"</p>  
     </div>
     <div class="lineazul"></div>
-    <div class="sub-info">
+    <div id="sub-info">
         <p>Con gran entusiasmo me dirijo a usted para expresar mi interés en formar parte del prestigioso programa de alimentación sana de 
           "Elige Vivir Sano ONU". La oportunidad de contribuir a la promoción de estilos de vida saludables y de aprender de un equipo tan 
           comprometido y talentoso me resulta extremadamente motivadora.</p>
     </div>
 </div>
-<!--............................................. platos a recomendar-->
+
 
   <div id="productos"> 
     <ion-card>
@@ -161,68 +161,53 @@
       </ion-card-content>
     </ion-card>
   </div> 
-  
-  <!--............................................. sobre organizacion-->
-    
-<div id="propocito-base">
   <div class="sub-titulos">
-    <p id="texto-nosotros">Nuestro proposito</p>  
+    <h1>Nuestro proposito</h1>  
   </div>
-  <div class="sub-info">
-    <p id="info-nosotros">Para asegurar que el nuevo sitio web y el desarrollo del módulo para cálculo de información
+  <div class="texto">
+    <h3>Para asegurar que el nuevo sitio web y el desarrollo del módulo para cálculo de información
       nutricional y huella de carbono cumplan con los altos estándares de calidad y funcionalidad,
       y por recomendación de los profesores de la Sede Melipilla de DUOC UC, la ONG ha decidido
       contratar a su equipo semestral de la asignatura Calidad de Software para asesorar a la
       organización en la creación y gestión de un proceso de pruebas completo, enfocado en
       garantizar la calidad del desarrollo y el cumplimiento de todos los requisitos establecidos
-      para el sistema.</p>
+      para el sistema.</h3>
   </div>
-  <div id="mas-info-pro">
-    <a href="https://www.un.org/es/about-us">
-      <button class="button-all">
-        Más Info
-      </button>         
-    </a> 
-  </div>  
-</div>  
-<br>
-<br>
-<br>
-
-<!--............................................. fotter de pagina-->
-<ion-footer>
-  <div class="footer-contenidos">
-    <div class="footer-secciones">
-      <div class="footer-seccion">
-        <img src="https://www.un.org/sites/un2.un.org/themes/bootstrap_un2/images/logo-es-reverse.svg" alt="">
+  <br>
+  <br>
+  <br>
+  <ion-footer>
+    <div class="footer-contenidos">
+      <div class="footer-secciones">
+        <div class="footer-seccion">
+          <img src="https://www.un.org/sites/un2.un.org/themes/bootstrap_un2/images/logo-es-reverse.svg" alt="">
+        </div>
+        <div class="footer-seccion">
+          <ul class="iconos-sociales">
+            <li><a href="https://www.facebook.com/unitednations"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.twitter.com/un"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/unitednations"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/company/united-nations"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li><a href="https://www.youtube.com/unitednations"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            <div id="trato"></div>
+            <button>DONACIONES</button>
+          </ul>
+        </div>
       </div>
-      <div class="footer-seccion">
-        <ul class="iconos-sociales">
-          <li><a href="https://www.facebook.com/unitednations"><ion-icon name="logo-facebook"></ion-icon></a></li>
-          <li><a href="https://www.twitter.com/un"><ion-icon name="logo-twitter"></ion-icon></a></li>
-          <li><a href="https://www.instagram.com/unitednations"><ion-icon name="logo-instagram"></ion-icon></a></li>
-          <li><a href="https://www.linkedin.com/company/united-nations"><ion-icon name="logo-linkedin"></ion-icon></a>
-          </li>
-          <li><a href="https://www.youtube.com/unitednations"><ion-icon name="logo-youtube"></ion-icon></a></li>
-          <div id="trato"></div>
-          <button>DONACIONES</button>
+      <div class="otroDivisor"></div>
+
+      <div>
+        <ul id="ul">
+          <li><a href="">ALERTA DE FRAUDE</a></li>
+          <li><a href="">COMUNIQUESE CON NOSOTROS</a></li>
+          <li><a href="">CONDICIONES DE UTILIZACION</a></li>
+          <li><a href="">PREGUNTAS FRECUENTES</a></li>
+          <li><a [routerLink]="['/privacidad']" href="">PRIVACIDAD</a></li>
+          <li><a href="">PROPIEDAD INTELECTUAL</a></li>
+          <li id="ultimo"><a href="">INDICE DEL SITIO</a></li>
         </ul>
       </div>
     </div>
-    <div class="otroDivisor"></div>
-
-    <div>
-      <ul id="ul">
-        <li><a href="">ALERTA DE FRAUDE</a></li>
-        <li><a href="">COMUNIQUESE CON NOSOTROS</a></li>
-        <li><a href="">CONDICIONES DE UTILIZACION</a></li>
-        <li><a href="">PREGUNTAS FRECUENTES</a></li>
-        <li><a href="">PRIVACIDAD</a></li>
-        <li><a href="">PROPIEDAD INTELECTUAL</a></li>
-        <li id="ultimo"><a href="">INDICE DEL SITIO</a></li>
-      </ul>
-    </div>
-  </div>
-</ion-footer>
-
+  </ion-footer>
 </ion-content>

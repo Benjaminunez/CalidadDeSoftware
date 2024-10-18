@@ -5,30 +5,31 @@
       <p>Bienvenidos a naciones unidas</p>
     </div>
     <div id="part2">
-        <p>Español</p>
-        <p>English</p>
-        <p>日本語</p>
-        <p>Deutsch</p>
+      <p>Español</p>
+      <p>English</p>
+      <p>日本語</p>
+      <p>Deutsch</p>
     </div>
   </div>
-  
+
   <div id="cabezera-chico">
     <div id="part1">
       <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
       <p>Bienvenidos a naciones unidas</p>
     </div>
   </div>
-  
+
   <header>
     <div id="img-titulo-g">
-      <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="" [routerLink]="['/home']">
+      <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
       <div class="linea-horizontal"></div>
       <div id="titulo-pagina">
-        <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
+        <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>
       </div>
     </div>
     <div id="boton-buscador">
-      <a href="https://webtv.un.org/es?_gl=1*113aiqa*_ga*MTY2MzQ4NzgxMS4xNzI4NjYzMjAy*_ga_TK9BQL5X7Z*MTcyOTAzNjkxNi41LjEuMTcyOTAzNzQzOS4wLjAuMA..">
+      <a
+        href="https://webtv.un.org/es?_gl=1*113aiqa*_ga*MTY2MzQ4NzgxMS4xNzI4NjYzMjAy*_ga_TK9BQL5X7Z*MTcyOTAzNjkxNi41LjEuMTcyOTAzNzQzOS4wLjAuMA..">
         <button id="TV">
           UN Web TV
         </button>
@@ -36,23 +37,23 @@
       <input type="text" placeholder="Búsqueda">
       <button id="search">
         <ion-icon name="search"></ion-icon>
-      </button> 
+      </button>
     </div>
   </header>
-  
+
   <div id="img-titulo-p">
     <img src="https://www.resumenlatinoamericano.org/wp-content/uploads/2023/11/naciones-unidas-un-png.png" alt="">
     <div class="linea-horizontal"></div>
     <div id="titulo-pagina">
-      <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>   
+      <h1 id="tituloSuperior">Programa alimentación "ONG life and sustentability"</h1>
     </div>
-  </div>  
-  
-  <div id="baseMenu">    
+  </div>
+
+  <div id="baseMenu">
     <div id="menuOption">
       <ion-button title="Registrar Usuario" (click)="irRegistro()" class="botonLinkeador">
         <ion-icon name="person-add"> </ion-icon>
-         Registro Usuario
+        Registro Usuario
       </ion-button>
       <ion-button title="Usuario Premium" (click)="irRegistrado()" class="botonLinkeador">
         <ion-icon name="diamond"></ion-icon>
@@ -64,7 +65,7 @@
       </ion-button>
     </div>
   </div>
-  
+
   <form (submit)="calcularAlimentos()" class="buscadorAlimento">
     <h1 class="nose">Calculadora de Huella de Carbono</h1>
     <h3 class="nose">Accede a información detallada de ingredientes y platos preparados.</h3>
@@ -90,22 +91,22 @@
       <button class="btn">8</button>
       <button class="btn">9</button>
       <button class="btn operator">/</button>
-      
+
       <button class="btn">4</button>
       <button class="btn">5</button>
       <button class="btn">6</button>
       <button class="btn operator">*</button>
-      
+
       <button class="btn">1</button>
       <button class="btn">2</button>
       <button class="btn">3</button>
       <button class="btn operator">-</button>
-      
+
       <button class="btn">0</button>
       <button class="btn">.</button>
       <button class="btn">C</button>
       <button class="btn operator">+</button>
-      
+
       <button class="btn equals" colspan="4">=</button>
     </div>
   </div>
@@ -139,7 +140,7 @@
           <li><a href="">COMUNIQUESE CON NOSOTROS</a></li>
           <li><a href="">CONDICIONES DE UTILIZACION</a></li>
           <li><a href="">PREGUNTAS FRECUENTES</a></li>
-          <li><a href="">PRIVACIDAD</a></li>
+          <li><a [routerLink]="['/privacidad']" href="">PRIVACIDAD</a></li>
           <li><a href="">PROPIEDAD INTELECTUAL</a></li>
           <li id="ultimo"><a href="">INDICE DEL SITIO</a></li>
         </ul>
