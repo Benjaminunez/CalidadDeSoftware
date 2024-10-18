@@ -112,6 +112,7 @@ header{
     img{
         max-width: 20rem;
         margin: 10px 0px;
+        cursor: pointer;
         }
         #titulo-pagina{
             max-width: 20rem;
@@ -409,8 +410,7 @@ header{
         margin: 3px 4px;
         font-size: 19px;
         color: var(--colorh3Expli);
-        font-family: "Courgette", cursive;
-        font-weight: 400;
+
     }
 
 }

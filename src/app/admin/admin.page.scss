@@ -119,10 +119,11 @@ header {
         width: 2px;
     }
 
-    img {
+    img{
         max-width: 20rem;
         margin: 10px 0px;
-    }
+        cursor: pointer;
+        }
 
     #titulo-pagina {
         max-width: 20rem;
